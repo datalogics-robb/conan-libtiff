@@ -44,6 +44,8 @@ class LibtiffConan(ConanFile):
         cmake.definitions['CMAKE_INSTALL_BINDIR'] = 'bin'
         cmake.definitions['CMAKE_INSTALL_INCLUDEDIR'] = 'include'
 
+        cmake.definitions['CMAKE_POSITION_INDEPENDENT_CODE'] = self.options.fPIC
+
         cmake.definitions["lzma"] = False
         cmake.definitions["jpeg"] = False
         cmake.definitions["jbig"] = False
